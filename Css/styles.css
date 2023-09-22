@@ -1,0 +1,402 @@
+/*FUENTES*/
+@font-face {
+    font-family: "nevis"; /*Se declara en diferentes formatos para que los navegadores puedan elegir el formato que mejor se adapte a sus capacidades y mostrar la fuente correcta*/
+    src: url("fonts/nevis.eot"),
+        url("fonts/nevis.eot?#iefix") format('embedded-opentyoe'),
+        url("fonts/nevis.wof") format('woff'),
+        url("fonts/nevis.ttf") format('truetype'),
+        url("fonts/nevis.svg") format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "fjalla";
+    src: url("fonts/FjallaOne-Regular.ttf") format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "icons";
+    src: url("fonts/websymbols-regular-webfont.svg#WebSymbolsRegular") format('svg'),
+         url("fonts/websymbols-regular-webfont.eot");
+    src:url("fonts/websymbols-regular-webfont.eot?#iefix") format('embedded-opentyoe'),
+        url("fonts/websymbols-regular-webfont.woff") format('woff'),
+        url("fonts/websymbols-regular-webfont.ttf") format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*ESTILOS GENERALES*/
+
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+.clearfix{ 
+    float: none;
+    clear: both;
+}
+
+
+body{
+    background-image: url("../img/paven.png"); 
+}
+
+
+
+#header{ /*CAJA QUE CONTOENE AL (#content_logotipo (este a la imagen) y al titulo)*/
+    width: 100%; 
+    height: 250px;
+    margin: 0px auto; 
+}
+
+#header #content_logotipo{ /*CAJA QUE CONTIENE A LA IMAGEN*/
+    margin: 0px auto; 
+    padding-top: 20px;
+}
+
+#header #content_logotipo img{
+    display: block;
+    margin: 0px auto;
+    width: 140px;
+}
+
+
+
+#header h1{ 
+    text-align: center;
+    font-size: 40px;
+    font-family: nevis;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin-top: 10px;
+    text-shadow:  0px 0px 15px #333333; /*Primer valor (sombra en x) - Segundo valor (sombra en Y) - Tercer valor (opacidad)*/
+}
+
+#header h1 a{
+    text-decoration: none;
+    color: #70b231;
+}
+
+#header h1 a:hover {
+    transition: all 300ms; 
+    text-shadow: 0px 2px 1px #333333, 0px 0px 4px #70b231;
+}
+
+/* --------- MENU / BARRA DE NAVEGACION ---------*/
+/*box-shadow (sombra para cajas) - text-shadow (sombra en el)*/
+
+#nav{ /*CAJA CONTENEDORA GENERAL DEL NAV*/
+    min-width: 1250px;
+    background-color: #333333;
+    color: white;
+    height: 40px;
+    font-family: sans-serif, Helvetica, Arial;
+    font-size: 14px;
+    box-shadow:  0px 0px 20px gray;
+}
+
+#nav ul { /*CAJA QUE CONTIENE A LA LISTA */
+    list-style: none;
+    margin: 0px auto;
+    width: 1090px; 
+}
+
+#nav > ul > li { /*CONTIENE A CADA ELEMENTO LI DE LA LISTA*/
+    line-height: 40px;
+    float: left; 
+    border-right: 1px solid gray;
+    transition: all 500ms; 
+}
+#nav > ul >li a { /*ELEMENTO DENTRO DEL LI */
+    display: block; 
+    padding-left: 20px;
+    padding-right: 20px;
+    color: white;
+    text-decoration: none;
+}
+
+#nav > ul > li:first-child{
+    border-left: 1px solid gray; 
+}
+
+#nav > ul >li:hover {
+    background-color: #70b231;
+    box-shadow: 0px 0px 10px green inset;
+}
+
+/* MENU DESPLEGABLE */
+
+#nav > ul > li > ul{
+    display: none; /*PONGO ESTO PARA QUE EL DESPLEGABLE NO SE VEA ENSEGUIDA*/
+    position: absolute;
+    width: 160px;
+    box-shadow: 0px 2px 2px gray;
+    z-index: 1; 
+}
+
+#nav > ul > li:hover > ul {
+    display: block;
+}
+
+#nav > ul > li:hover > ul > li {
+    background-color: #F2F1F0;
+    border-bottom: 1px solid #D6D6D6;
+    padding: 8px;
+    line-height: 25px;
+    transition: all 700ms;
+}
+
+#nav > ul > li:hover > ul > li > a {
+    color: #666; /*COLOR DE LAS LETRAS DEL DESPPLEGABLE*/
+}
+
+#nav > ul > li:hover > ul > li:hover {
+   background-color: #ccc;
+}
+
+/*CONTENIDO TOTAL*/
+#content{ 
+    width: 1250px;
+    min-height: 1600px;
+    margin: 0px auto; 
+    font-family: sans-serif,Arial, Helvetica;
+}
+
+/* ---------- BARRA LATERAL ---------*/
+
+#aside, #frase{ /* CONTENIDO TOTAL QUE ABARCA LAS 3 CAJAS*/
+    width: 200px;
+    margin: 30px; 
+    background-color: white;
+    float: left;
+    border: 1px solid black;
+    box-shadow: 0px 2px 2px #ccc;
+    font-family: sans-serif, Arial, Helvetica;
+}
+
+#frase{ 
+    width: 180px;
+    font-family: sans-serif;
+    font-size: 14px;
+    padding: 10px;
+}
+
+#aside .widget{
+    display: block;
+    width: 180px; 
+    margin: 5px auto;
+    padding: 8px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 14px;
+    border-bottom: 2px dashed #ccc;
+
+}
+
+#aside .widget:last-child{ /*Al ultImo widget le agrego esto*/
+    margin-bottom: 20px;
+}
+
+#aside h3{ 
+    display: block;
+    background-color: #f2f3f2;
+    text-align: center;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    color: #333333;
+    border: 1px solid #ccc;
+    border-right: none;
+    border-left: none;
+    margin-bottom: 15px;
+}
+
+#aside li{
+    margin-top: 8px;
+    margin-bottom: 5px;
+    margin-left: 20px;
+    list-style: square;
+}
+
+/*FORMULARIOS: ESTILOS GENERALES*/ 
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select{
+    border: 1px solid #c9c9c9;
+    box-shadow: 0px 0px 2px #ccc inset ;
+    padding: 2px;
+    color: gray;
+    transition: all 400ms;
+    outline: none; /*Esto es para que funcione el focus en CHROME*/
+    
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus{
+    border: 1px solid #70b231;
+    color: black;
+    
+}
+
+button{
+    display: block; 
+    border-radius: 2px;
+    border: 1px solid gray;
+    width: 60px;
+    padding: 3px;
+    background-color: #70b231;
+    color: white;
+    cursor: pointer;
+   
+}
+
+button:hover{
+    box-shadow: 0px 0px 7px gray ;
+}
+
+button:active{ /*Cuando le haga click*/
+    box-shadow: 0px 0px 7px gray inset ;
+    text-shadow: 0px 0px 2px #ccc inset ;
+}
+
+a{
+    color: #529125;
+    text-decoration: none;
+}
+
+a:visited{
+    color: #529125;
+    text-decoration: none;
+}
+
+a:hover{
+    color: #285616;
+}
+/*FORMULARIOS BARRA LATERAL*/
+
+#aside div label,
+#aside div input[type="text"],
+#aside div input[type="email"],
+#aside div input[type="password"],
+#aside div a{ 
+    display: block;
+    width: 95%;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+#aside div button,
+#aside div input[type="submit"]{
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+#aside input,
+#aside label,
+#aside div button{
+    margin: 0px auto; 
+    text-align: center;
+}
+
+.red{
+    color:#9b2422 !important;
+}
+.blue{
+    color:#0c73f2 !important
+}
+
+.orange{
+    color: #d69d2a !important;
+}
+
+
+/* ---------- SECCIONES ---------*/
+
+#sections{
+    float: right; 
+    width: 75%;
+    font-family: sans-serif,Arial, Helvetica;
+    margin-right: 20px;
+}
+
+#sections .titulo{
+    font-family: fjalla;
+    font-size: 25px;
+    font-weight: normal;
+    letter-spacing: 1px;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 5px;
+    margin-top: -20px;
+}
+
+#sections section{
+    margin-top: 40px;
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0px 0px 4px #C9C9C9;
+    color: #333333;
+    font-size: 16px;
+    overflow: hidden;
+}
+
+#sections article{
+    margin: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#sections .date{
+    color: gray;
+    font-size: 14px;
+}
+
+/*PARTE DE LOS STICKERS*/
+#sections .stickerOne,
+#sections .stickerTwo{
+    position: absolute;
+    margin-top: -38px;
+    z-index: 0; /* Para que se posicione uno sobre otro, el elemento con valor mayor, se superpone al otro*/
+}
+
+#sections .stickerTwo{
+    margin-left: 860PX;
+}
+
+.icon{ /*Emoticones en el section*/
+    font-family: icons;
+    float: left; 
+    margin-right: 5px; 
+    margin-top: -1px; 
+}
+
+/* --------- FOOTER ---------- */
+
+#history{
+    float: right; 
+    margin-top: 20px;
+    margin-right: 20px;
+}
+
+footer{
+    min-width: 1250px; 
+    margin: 0px auto; 
+    text-align: center;
+    margin-top: 50px;
+    background-color: #333333;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: white;
+    font-size: 14px;
+    font-family: sans-serif;
+    box-shadow: 0px 0px 2px grey;
+}
+
+
