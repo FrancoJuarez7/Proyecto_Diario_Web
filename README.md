@@ -37,8 +37,10 @@ Para ejecutar el proyecto localmente, necesitarás un navegador web compatible c
 2. Abre el archivo `index.html` en tu navegador web.
 3. Explora el diario web interactuando con la barra de navegación, las secciones de contenido y los widgets en la barra lateral.
 
-## Contribuciones
+## Contacto
 
-¡Las contribuciones son bienvenidas! Si deseas sugerir mejoras en el diseño, la funcionalidad o cualquier otro aspecto del blog, no dudes en abrir un issue o enviar una solicitud de extracción con tus cambios propuestos.
+Si tienes alguna pregunta, sugerencia o simplemente quieres comunicarte conmigo, no dudes en contactarme:
 
-¡Gracias por tu interés!
+- Correo electrónico: fdjuarez33@gmail.com
+
+¡Gracias por visitar mi proyecto!
